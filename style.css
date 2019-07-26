@@ -1,0 +1,41 @@
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+}
+ul {
+    background-color: darkgrey;
+    list-style-type: none;
+    margin: 0;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+main {
+    background-color: darkslategrey;
+}
+h2 {
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+footer {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+h3 {
+    color: white;
+    margin: 0;
+}
