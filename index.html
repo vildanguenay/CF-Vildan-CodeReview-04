@@ -32,8 +32,9 @@
         console.log(movies)
         var lib = document.getElementById("library");
         var btn = document.getElementsByClassName("buttn");
+        var number = document.getElementById("likesIncr");
 
-        for (var i = 0; i < movies.length; i++) {
+        for (var i = 0; i<movies.length; i++) {
             console.log(lib.innerHTML);
             lib.innerHTML +=
                 `<div class="movieWrapper">
@@ -52,13 +53,14 @@
                     </div>
                 </div>`;
         }
-        // for(var i=0; i<movies.length; i++) {
-        //     btn[i].addEventListener("click", function(){displayLikes(this.getAttribute("id"))}, false);
-        // }
-        // function incrementLikes(i) {
-        //     +1
+        for(var i=0; i<movies.length; i++) {
+            btn[i].addEventListener("click", function(){incrementLikes(this.getAttribute("id"))}, false);
+        }
 
-        // }
+        function incrementLikes(i) {
+            likesIncr.innerHTML += i++;
+
+        }
     </script>
 </body>
 
