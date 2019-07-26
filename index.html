@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Movie Factory</title>
 </head>
+
 <body>
     <header>Movie Factory</header>
     <nav>
@@ -15,7 +18,9 @@
         </ul>
     </nav>
     <main>
-        <h2>Movies</h2>
+        <div class="mainTitle">
+            <h2 class="libTitle">Movies</h2>
+        </div>
         <div id="library"></div>
     </main>
     <footer>
@@ -24,14 +29,37 @@
 
     <script type="text/javascript" src="movies.json"></script>
     <script>
-        var lib = document.GetElementById("library");
-        
+        console.log(movies)
+        var lib = document.getElementById("library");
+        var btn = document.getElementsByClassName("buttn");
 
-        for(var i; i<movies.length; i++) {
-            lib.innerHTML += 
-            `<div id="boxes">
-                div
+        for (var i = 0; i < movies.length; i++) {
+            console.log(lib.innerHTML);
+            lib.innerHTML +=
+                `<div class="movieWrapper">
+                    <div class="moviePoster"><img src="${movies[i].poster}" height="300" width="200"></div>
+                    <div class="rightColumn">
+                        <div class="movieText">
+                            <h2 class="movieTitle">${movies[i].movieName}</h2>
+                            <p class="movieDescription">${movies[i].description}</p>
+                        </div>
+                        <div class="buttonAndLikes">
+                            <button style="font-size:24px">
+                                Like <i class="fa fa-thumbs-up"></i>
+                            </button>
+                            <span class="likes">XY</span>
+                        </div>
+                    </div>
+                </div>`;
         }
+        // for(var i=0; i<movies.length; i++) {
+        //     btn[i].addEventListener("click", function(){displayLikes(this.getAttribute("id"))}, false);
+        // }
+        // function incrementLikes(i) {
+        //     +1
+
+        // }
     </script>
 </body>
+
 </html>

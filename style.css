@@ -4,13 +4,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 4rem;
+    padding: 2rem 0;
 }
 ul {
     background-color: darkgrey;
     list-style-type: none;
     margin: 0;
-    height: 2rem;
+    padding: 1rem 0 1rem 1rem;
     display: flex;
     align-items: center;
 }
@@ -18,12 +18,11 @@ li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    
 }
 main {
     background-color: darkslategrey;
 }
-h2 {
+.libTitle {
     text-align: center;
     color: white;
     margin: 0;
@@ -33,9 +32,53 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3rem;
+    padding: 2rem 0;
 }
 h3 {
     color: white;
     margin: 0;
+}
+#library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movieWrapper {
+    display: flex;
+    flex-basis: 40%;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    background-color: black; 
+}
+.movieText {
+    color: white;
+}
+.moviePoster {
+    margin: 1rem;
+}
+button {
+    color: green;
+    background-color: black;
+    border-style: none;
+}
+.likes {
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.buttonAndLikes {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+.movieDescription {
+    margin-right: 1rem;
 }
