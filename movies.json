@@ -1,44 +1,44 @@
 movies = [
     {
-        "id": 1,
+        "id": 0,
         "movieName": "A Star Is Born",
         "description": "A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.",
         "poster": "img/star.jpg",
-        "likes": 7
+        "likes": 17
     },
     {
-        "id": 2,
+        "id": 1,
         "movieName": "Once Upon a Time in Hollywood",
         "description": " A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.",
         "poster": "img/hollywood.jpg",
         "likes": 10
     },
     {
-        "id": 3,
+        "id": 2,
         "movieName": "Mike Wallace Is Here",
         "description": "A look at the career of '60 Minutes' newsman, Mike Wallace.",
         "poster": "img/wallace.jpg",
-        "likes": 6
+        "likes": 16
     },
     {
-        "id": 4,
+        "id": 3,
         "movieName": "Honeyland",
         "description": "The last female beehunter in Europe must save the bees and return the natural balance in Honeyland, when a family of nomadic beekeepers invade her land and threaten her livelihood. This film is an exploration of an observational Indigenous visual narrative that deeply impacts our behavior towards natural resources and the human condition.",
         "poster": "img/honeyland.jpg",
-        "likes": 8
+        "likes": 18
     },
     {
-        "id": 5,
+        "id": 4,
         "movieName": "Tel Aviv on Fire",
         "description": "Salam, an inexperienced young Palestinian man, becomes a writer on a popular soap opera after a chance meeting with an Israeli soldier. His creative career is on the rise - until the soldier and the show's financial backers disagree about how the show should end, and Salam is caught in the middle.",
         "poster": "img/tel-aviv.jpg",
-        "likes": 7
+        "likes": 17
     },
     {
-        "id": 6,
+        "id": 5,
         "movieName": "Skin",
         "description": "A destitute young man, raised by racist skinheads and notorious among white supremacists, turns his back on hatred and violence to transform his life, with the help of a black activist and the woman he loves.",
         "poster": "img/skin.jpg",
-        "likes": 7
+        "likes": 17
     }
 ]

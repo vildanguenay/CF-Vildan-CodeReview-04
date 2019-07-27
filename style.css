@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 header {
     background-color: black;
     color: white;
@@ -5,6 +8,8 @@ header {
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
+    font-size: 65px;
+    font-weight: bold;
 }
 ul {
     background-color: darkgrey;
@@ -18,6 +23,7 @@ li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 35px;
 }
 main {
     background-color: darkslategrey;
@@ -26,6 +32,9 @@ main {
     text-align: center;
     color: white;
     margin: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 35px;
 }
 footer {
     background-color: black;
@@ -37,6 +46,7 @@ footer {
 h3 {
     color: white;
     margin: 0;
+    font-size: 25px;
 }
 #library {
     display: flex;
@@ -72,6 +82,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 }
 .buttonAndLikes {
     margin-bottom: 2rem;

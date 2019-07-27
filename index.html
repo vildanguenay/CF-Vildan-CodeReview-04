@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Movie Factory</title>
 </head>
-
 <body>
     <header>Movie Factory</header>
     <nav>
@@ -29,13 +27,12 @@
 
     <script type="text/javascript" src="movies.json"></script>
     <script>
-        console.log(movies)
+        
         var lib = document.getElementById("library");
-        var btn = document.getElementsByClassName("buttn");
+        var btn = document.getElementsByTagName("button");
         var number = document.getElementById("likesIncr");
 
-        for (var i = 0; i<movies.length; i++) {
-            console.log(lib.innerHTML);
+        for (var i = 0; i < movies.length; i++) {
             lib.innerHTML +=
                 `<div class="movieWrapper">
                     <div class="moviePoster"><img src="${movies[i].poster}" height="300" width="200"></div>
@@ -45,23 +42,26 @@
                             <p class="movieDescription">${movies[i].description}</p>
                         </div>
                         <div class="buttonAndLikes">
-                            <button style="font-size:24px">
+                            <button id="${movies[i].id}" style="font-size:24px">
                                 Like <i class="fa fa-thumbs-up"></i>
                             </button>
-                            <span class="likes">XY</span>
+                            <span id="${movies[i].id}" class="likes">${movies[i].likes}</span>
                         </div>
                     </div>
                 </div>`;
         }
-        for(var i=0; i<movies.length; i++) {
-            btn[i].addEventListener("click", function(){incrementLikes(this.getAttribute("id"))}, false);
+
+        for (var i = 0; i < movies.length; i++) {
+            btn[i].addEventListener("click", function () {
+                incrementLikes(this.getAttribute("id"));
+            });
         }
 
-        function incrementLikes(i) {
-            likesIncr.innerHTML += i++;
+        var votes = document.getElementsByClassName("likes");
 
+        function incrementLikes(id) {
+            votes[id].innerHTML = (Number(votes[id].innerHTML) + 1);
         }
     </script>
 </body>
-
 </html>
