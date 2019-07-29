@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Movie Factory</title>
 </head>
+
 <body>
     <header>Movie Factory</header>
     <nav>
@@ -27,10 +29,9 @@
 
     <script type="text/javascript" src="movies.json"></script>
     <script>
-        
+
         var lib = document.getElementById("library");
         var btn = document.getElementsByTagName("button");
-        var number = document.getElementById("likesIncr");
 
         for (var i = 0; i < movies.length; i++) {
             lib.innerHTML +=
@@ -51,17 +52,18 @@
                 </div>`;
         }
 
-        for (var i = 0; i < movies.length; i++) {
+        // add click-event to button (in for loop)
+        for (i = 0; i < movies.length; i++) {
             btn[i].addEventListener("click", function () {
-                incrementLikes(this.getAttribute("id"));
+                // through "click" start increment-function
+                var currentLikes = document.getElementsByClassName("likes");
+                var id = this.getAttribute("id");
+                // console.log(id);
+                currentLikes[id].innerHTML = (Number(currentLikes[id].innerHTML) + 1);
+
             });
-        }
-
-        var votes = document.getElementsByClassName("likes");
-
-        function incrementLikes(id) {
-            votes[id].innerHTML = (Number(votes[id].innerHTML) + 1);
         }
     </script>
 </body>
+
 </html>
